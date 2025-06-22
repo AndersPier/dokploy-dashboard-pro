@@ -9,14 +9,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - NODE_ENV=production
-    networks:
-      - dokploy_default
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.dashboard.rule=Host(`dashboard.yourdomain.com`)"
-      - "traefik.http.services.dashboard.loadbalancer.server.port=3000"
-      - "traefik.http.routers.dashboard.tls.certResolver=letsencrypt"
+    #networks:
+    #  - dokploy_default
+    #labels:
+    #  - "traefik.enable=true"
+    #  - "traefik.http.routers.dashboard.rule=Host(`dokploy.pier.dk`)"
+    #  - "traefik.http.services.dashboard.loadbalancer.server.port=3000"
+    #  - "traefik.http.routers.dashboard.tls.certResolver=letsencrypt"
 
-networks:
-  dokploy_default:
-    external: true
+#networks:
+#  dokploy_default:
+#    external: true
