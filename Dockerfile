@@ -1,5 +1,6 @@
 FROM node:18-alpine
-RUN addgroup -g 1001 -S docker && adduser -S nextjs -u 1001 -G docker
+#RUN addgroup -g 1001 -S docker && adduser -S nextjs -u 1001 -G docker
+RUN addgroup -g 988 -S docker && adduser -S nextjs -u 1001 -G docker
 USER nextjs
 
 WORKDIR /app
